@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Enfield Spare Parts</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Royal Enfield Spare Parts</h1>
+        <nav>
+            <button onclick="showHome()">Home</button>
+            <button onclick="showCart()">Cart (<span id="cart-count">0</span>)</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Homepage -->
+        <section id="home" class="active">
+            <h2>Select a Bike Model</h2>
+            <div id="model-list" class="grid-container">
+                <!-- Bike models will be dynamically loaded here -->
+            </div>
+        </section>
+
+        <!-- Components Page -->
+        <section id="components">
+            <h2>Components</h2>
+            <button onclick="showHome()">Back to Models</button>
+            <div id="component-list" class="grid-container">
+                <!-- Components will be dynamically loaded here -->
+            </div>
+        </section>
+
+        <!-- Spare Parts Page -->
+        <section id="spare-parts">
+            <h2>Spare Parts</h2>
+            <button onclick="showComponents()">Back to Components</button>
+            <div id="spare-part-list" class="grid-container">
+                <!-- Spare parts will be dynamically loaded here -->
+            </div>
+        </section>
+
+        <!-- Cart Page -->
+        <section id="cart">
+            <h2>Your Cart</h2>
+            <button onclick="showHome()">Continue Shopping</button>
+            <div id="cart-items">
+                <!-- Cart items will be dynamically loaded here -->
+            </div>
+            <button onclick="placeOrder()">Place Order</button>
+
+            <!-- User Verification Form -->
+            <div id="user-verification" style="display: none;">
+                <h3>Enter Your Details</h3>
+                <form onsubmit="submitOrder(event)">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" required>
+                    <br>
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" required>
+                    <br>
+                    <button type="submit">Confirm Order</button>
+                </form>
+            </div>
+
+            <!-- Order Confirmation Message -->
+            <div id="order-confirmation" style="display: none;">
+                <h3>Order Placed Successfully!</h3>
+                <p>Thank you for shopping with us.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
