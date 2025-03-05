@@ -403,3 +403,26 @@ function submitOrder(event) {
 
 // Initialize
 showHome();
+const form = document.getElementById('userForm');
+const statusMessage = document.getElementById('status');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+
+  // Save data to Firestore
+  db.collection('users').add({
+    name: name,
+    email: email,
+    timestamp: firebase.firestore.FieldValue.serverTimestamp()
+  })
+  .then(() => {
+    statusMessage.textContent = 'Data submitted successfully!';
+    form.reset();
+  })
+  .catch((error) => {
+    statusMessage.textContent = 'Error submitting data: ' + error;
+  });
+});
