@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Royal Enfield Spare Parts</title>
-    <link rel="stylesheet" href="mmm.css">
+    <title>Motorcycle Spare Parts Online</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Royal Enfield Spare Parts</h1>
+        <h1>Motorcycle Spare Parts Online</h1>
         <nav>
             <button onclick="showHome()">Home</button>
             <button onclick="showCart()">Cart (<span id="cart-count">0</span>)</button>
@@ -16,52 +16,51 @@
     </header>
 
     <main>
-        <!-- Homepage -->
+        <!-- Homepage (Companies) -->
         <section id="home" class="active">
-            <h2>Select a Bike Model</h2>
-            <div id="model-list" class="grid-container">
-                <!-- Bike models will be dynamically loaded here -->
-            </div>
+            <h2>Select a Bike Company</h2>
+            <div id="company-list" class="grid-container"></div>
+        </section>
+
+        <!-- Models Page -->
+        <section id="models">
+            <h2>Models</h2>
+            <button onclick="showHome()">Back to Companies</button>
+            <div id="model-list" class="grid-container"></div>
         </section>
 
         <!-- Components Page -->
         <section id="components">
             <h2>Components</h2>
-            <button onclick="showHome()">Back to Models</button>
-            <div id="component-list" class="grid-container">
-                <!-- Components will be dynamically loaded here -->
-            </div>
+            <button onclick="showModels()">Back to Models</button>
+            <div id="component-list" class="grid-container"></div>
         </section>
 
         <!-- Spare Parts Page -->
         <section id="spare-parts">
             <h2>Spare Parts</h2>
             <button onclick="showComponents()">Back to Components</button>
-            <div id="spare-part-list" class="grid-container">
-                <!-- Spare parts will be dynamically loaded here -->
-            </div>
+            <div id="spare-part-list" class="grid-container"></div>
         </section>
 
         <!-- Cart Page -->
         <section id="cart">
             <h2>Your Cart</h2>
             <button onclick="showHome()">Continue Shopping</button>
-            <div id="cart-items">
-                <!-- Cart items will be dynamically loaded here -->
-            </div>
+            <div id="cart-items"></div>
+            <div id="cart-total"></div>
             <button onclick="placeOrder()">Place Order</button>
 
             <!-- User Verification Form -->
             <div id="user-verification" style="display: none;">
                 <h3>Enter Your Details</h3>
-                <form onsubmit="submitOrder(event)">
+                <form id="order-form" onsubmit="submitOrder(event)">
                     <label for="username">Username:</label>
                     <input type="text" id="username" required>
-                    <br>
                     <label for="phone">Phone Number:</label>
                     <input type="tel" id="phone" required>
-                    <br>
                     <button type="submit">Confirm Order</button>
+                    <div id="loading-spinner" class="spinner"></div>
                 </form>
             </div>
 
@@ -73,29 +72,25 @@
         </section>
     </main>
 
-    <script src="mmm.js"></script>
+    <!-- Firebase Compat SDK Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/11.4.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.4.0/firebase-firestore-compat.js"></script>
+
+    <!-- Firebase Configuration and Initialization -->
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyCY6AIWSCkzedwYzyZpZZoALSg2aFNNZFo",
+            authDomain: "sparepartsvijayawada.firebaseapp.com",
+            projectId: "sparepartsvijayawada",
+            storageBucket: "sparepartsvijayawada.firebasestorage.app",
+            messagingSenderId: "684284121425",
+            appId: "1:684284121425:web:ecaa7cc0695255225e0370",
+            measurementId: "G-FCHBDN3SDC"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <!-- Load script.js -->
+    <script src="script.js"></script>
 </body>
-    <script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyABO9E-TuA4AWGpHml_ph0-jQy9I9Kbwhs",
-    authDomain: "spareparts-70033.firebaseapp.com",
-    projectId: "spareparts-70033",
-    storageBucket: "spareparts-70033.firebasestorage.app",
-    messagingSenderId: "862786948282",
-    appId: "1:862786948282:web:224b1fd62bb8a368be0683",
-    measurementId: "G-WRZ014NLM2"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-</script>
 </html>
