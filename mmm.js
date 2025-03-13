@@ -857,6 +857,8 @@ function submitOrder(event) {
         username: username,
         phone: phone,
         items: cart.map(item => ({
+           name: item.company name,
+            name: item.model name,
             name: item.name,
             price: item.price,
             quantity: item.quantity,
