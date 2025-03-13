@@ -783,7 +783,7 @@ function renderCart() {
             <div class="cart-item">
                 <img src="${item.image}" alt="${item.name}">
                 <div>
-                    <h3>${item.name}</h3>
+                    <h3>${item.companyName} ${item.modelName}{item.name}</h3>
                     <p>$${item.price} x ${item.quantity} = $${item.price * item.quantity}</p>
                 </div>
                 <div class="quantity-controls">
@@ -857,8 +857,8 @@ function submitOrder(event) {
         username: username,
         phone: phone,
         items: cart.map(item => ({
-            companyName: item.company name,
-            modelName: item.model name,
+            companyName: item.companyName,
+            modelName: item.modelName,
             name: item.name,
             price: item.price,
             quantity: item.quantity,
