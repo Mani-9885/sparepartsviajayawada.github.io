@@ -1,4 +1,4 @@
-// Company Data
+// Company Data (unchanged)
 const companyData = [
     { id: 1, name: "Royal Enfield", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1741345079/download_kwl7xm.jpg" },
     { id: 2, name: "Hero", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1741345079/download_3_lruu8z.png" },
@@ -8,571 +8,126 @@ const companyData = [
     { id: 6, name: "Suzuki", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1741345079/download_1_xzkboi.png" },
 ];
 
-// Bike Models by Company
+// Bike Models Data (unchanged, full list from your input)
 const bikeData = [
-    // Royal Enfield
-    
-    // 1990s Models
-    { 
-        id: 1, 
-        companyId: 1, 
-        name: "Bullet 350", 
-        year: "1990–Present", 
-        image: "https://res.cloudinary.com/df4awljmy/image/upload/c_thumb,w_200,g_face/v1739858431/Classic_350_noif3c.jpg", 
-        components: [
-            { id: 1, name: "Engine" }, 
-            { id: 2, name: "Transmission" }, 
-            { id: 3, name: "Suspension" }, 
-            { id: 4, name: "Brakes" }, 
-            { id: 5, name: "Electrical System" }, 
-            { id: 6, name: "Frame and Body" }, 
-            { id: 7, name: "Wheels and Tires" }, 
-            { id: 8, name: "Exhaust System" }
-        ]
-    },
-    { 
-        id: 2, 
-        companyId: 1, 
-        name: "Bullet 500", 
-        year: "1990–2020", 
-        image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/bullet_500_placeholder.jpg", 
-        components: [
-            { id: 1, name: "Engine" }, 
-            { id: 2, name: "Transmission" }, 
-            { id: 3, name: "Suspension" }, 
-            { id: 4, name: "Brakes" }, 
-            { id: 5, name: "Electrical System" }, 
-            { id: 6, name: "Frame and Body" }, 
-            { id: 7, name: "Wheels and Tires" }, 
-            { id: 8, name: "Exhaust System" }
-        ]
-    },
-    { 
-        id: 3, 
-        companyId: 1, 
-        name: "Enfield Diesel", 
-        year: "1993–2010", 
-        image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/enfield_diesel_placeholder.jpg", 
-        components: [
-            { id: 1, name: "Engine" }, 
-            { id: 2, name: "Transmission" }, 
-            { id: 3, name: "Suspension" }, 
-            { id: 4, name: "Brakes" }, 
-            { id: 5, name: "Electrical System" }, 
-            { id: 6, name: "Frame and Body" }, 
-            { id: 7, name: "Wheels and Tires" }, 
-            { id: 8, name: "Exhaust System" }
-        ]
-    },
-
+   { id: 1, companyId: 1, name: "Bullet 350", year: "1990–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/c_thumb,w_200,g_face/v1739858431/Classic_350_noif3c.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 2, companyId: 1, name: "Bullet 500", year: "1990–2020", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739688733/royal-enfield-select-model-airborne-blue-1579618691640_qejfy2.webp", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 3, companyId: 1, name: "Enfield Diesel", year: "1993–2010", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739687919/I2RPDVIQEBABBHTZPZBROYQ6RY_kqh3m0.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
     // 2000s Models
-    { 
-        id: 4, 
-        companyId: 1, 
-        name: "Thunderbird 350", 
-        year: "2002–2020", 
-        image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/thunderbird_350_placeholder.jpg", 
-        components: [
-            { id: 1, name: "Engine" }, 
-            { id: 2, name: "Transmission" }, 
-            { id: 3, name: "Suspension" }, 
-            { id: 4, name: "Brakes" }, 
-            { id: 5, name: "Electrical System" }, 
-            { id: 6, name: "Frame and Body" }, 
-            { id: 7, name: "Wheels and Tires" }, 
-            { id: 8, name: "Exhaust System" }
-        ]
-    },
-    { 
-        id: 5, 
-        companyId: 1, 
-        name: "Classic 350", 
-        year: "2009–Present", 
-        image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739688733/royal-enfield-select-model-airborne-blue-1579618691640_qejfy2.webp", 
-        components: [
-            { id: 1, name: "Engine" }, 
-            { id: 2, name: "Transmission" }, 
-            { id: 3, name: "Suspension" }, 
-            { id: 4, name: "Brakes" }, 
-            { id: 5, name: "Electrical System" }, 
-            { id: 6, name: "Frame and Body" }, 
-            { id: 7, name: "Wheels and Tires" }, 
-            { id: 8, name: "Exhaust System" }
-        ]
-    },
-    { 
-        id: 6, 
-        companyId: 1, 
-        name: "Classic 500", 
-        year: "2009–2020", 
-        image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/classic_500_placeholder.jpg", 
-        components: [
-            { id: 1, name: "Engine" }, 
-            { id: 2, name: "Transmission" }, 
-            { id: 3, name: "Suspension" }, 
-            { id: 4, name: "Brakes" }, 
-            { id: 5, name: "Electrical System" }, 
-            { id: 6, name: "Frame and Body" }, 
-            { id: 7, name: "Wheels and Tires" }, 
-            { id: 8, name: "Exhaust System" }
-        ]
-    },
-
+    { id: 4, companyId: 1, name: "Thunderbird 350", year: "2002–2020", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739858432/Super-Meteor-650_avwroz.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 5, companyId: 1, name: "Classic 350", year: "2009–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739688733/royal-enfield-select-model-airborne-blue-1579618691640_qejfy2.webp", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 6, companyId: 1, name: "Classic 500", year: "2009–2020", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739858432/Royal-Enfield-Classic-500_fbijp0.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
     // 2010s Models
-    { 
-        id: 7, 
-        companyId: 1, 
-        name: "Himalayan 411", 
-        year: "2016–2023", 
-        image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739858430/Himalaya_kclqaq.jpg", 
-        components: [
-            { id: 1, name: "Engine" }, 
-            { id: 2, name: "Transmission" }, 
-            { id: 3, name: "Suspension" }, 
-            { id: 4, name: "Brakes" }, 
-            { id: 5, name: "Electrical System" }, 
-            { id: 6, name: "Frame and Body" }, 
-            { id: 7, name: "Wheels and Tires" }, 
-            { id: 8, name: "Exhaust System" }
-        ]
-    },
-    { 
-        id: 8, 
-        companyId: 1, 
-        name: "Thunderbird 350X", 
-        year: "2018–2020", 
-        image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/thunderbird_350x_placeholder.jpg", 
-        components: [
-            { id: 1, name: "Engine" }, 
-            { id: 2, name: "Transmission" }, 
-            { id: 3, name: "Suspension" }, 
-            { id: 4, name: "Brakes" }, 
-            { id: 5, name: "Electrical System" }, 
-            { id: 6, name: "Frame and Body" }, 
-            { id: 7, name: "Wheels and Tires" }, 
-            { id: 8, name: "Exhaust System" }
-        ]
-    },
-    { 
-        id: 9, 
-        companyId: 1, 
-        name: "Thunderbird 500X", 
-        year: "2018–2020", 
-        image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/thunderbird_500x_placeholder.jpg", 
-        components: [
-            { id: 1, name: "Engine" }, 
-            { id: 2, name: "Transmission" }, 
-            { id: 3, name: "Suspension" }, 
-            { id: 4, name: "Brakes" }, 
-            { id: 5, name: "Electrical System" }, 
-            { id: 6, name: "Frame and Body" }, 
-            { id: 7, name: "Wheels and Tires" }, 
-            { id: 8, name: "Exhaust System" }
-        ]
-    },
-    { 
-        id: 10, 
-        companyId: 1, 
-        name: "Interceptor 650", 
-        year: "2018–Present", 
-        image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/interceptor_650_placeholder.jpg", 
-        components: [
-            { id: 1, name: "Engine" }, 
-            { id: 2, name: "Transmission" }, 
-            { id: 3, name: "Suspension" }, 
-            { id: 4, name: "Brakes" }, 
-            { id: 5, name: "Electrical System" }, 
-            { id: 6, name: "Frame and Body" }, 
-            { id: 7, name: "Wheels and Tires" }, 
-            { id: 8, name: "Exhaust System" }
-        ]
-    },
-    { 
-        id: 11, 
-        companyId: 1, 
-        name: "Continental GT 650", 
-        year: "2018–Present", 
-        image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/continental_gt_650_placeholder.jpg", 
-        components: [
-            { id: 1, name: "Engine" }, 
-            { id: 2, name: "Transmission" }, 
-            { id: 3, name: "Suspension" }, 
-            { id: 4, name: "Brakes" }, 
-            { id: 5, name: "Electrical System" }, 
-            { id: 6, name: "Frame and Body" }, 
-            { id: 7, name: "Wheels and Tires" }, 
-            { id: 8, name: "Exhaust System" }
-        ]
-    },
-
+    { id: 7, companyId: 1, name: "Himalayan 411", year: "2016–2023", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739858430/Himalaya_kclqaq.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 8, companyId: 1, name: "Thunderbird 350X", year: "2018–2020", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/thunderbird_350x_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 9, companyId: 1, name: "Thunderbird 500X", year: "2018–2020", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/thunderbird_500x_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 10, companyId: 1, name: "Interceptor 650", year: "2018–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/interceptor_650_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 11, companyId: 1, name: "Continental GT 650", year: "2018–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/continental_gt_650_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
     // 2020s Models
-    { 
-        id: 12, 
-        companyId: 1, 
-        name: "Meteor 350", 
-        year: "2020–Present", 
-        image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/meteor_350_placeholder.jpg", 
-        components: [
-            { id: 1, name: "Engine" }, 
-            { id: 2, name: "Transmission" }, 
-            { id: 3, name: "Suspension" }, 
-            { id: 4, name: "Brakes" }, 
-            { id: 5, name: "Electrical System" }, 
-            { id: 6, name: "Frame and Body" }, 
-            { id: 7, name: "Wheels and Tires" }, 
-            { id: 8, name: "Exhaust System" }
-        ]
-    },
-    { 
-        id: 13, 
-        companyId: 1, 
-        name: "Scram 411", 
-        year: "2022–Present", 
-        image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/scram_411_placeholder.jpg", 
-        components: [
-            { id: 1, name: "Engine" }, 
-            { id: 2, name: "Transmission" }, 
-            { id: 3, name: "Suspension" }, 
-            { id: 4, name: "Brakes" }, 
-            { id: 5, name: "Electrical System" }, 
-            { id: 6, name: "Frame and Body" }, 
-            { id: 7, name: "Wheels and Tires" }, 
-            { id: 8, name: "Exhaust System" }
-        ]
-    },
-    { 
-        id: 14, 
-        companyId: 1, 
-        name: "Hunter 350", 
-        year: "2022–Present", 
-        image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/hunter_350_placeholder.jpg", 
-        components: [
-            { id: 1, name: "Engine" }, 
-            { id: 2, name: "Transmission" }, 
-            { id: 3, name: "Suspension" }, 
-            { id: 4, name: "Brakes" }, 
-            { id: 5, name: "Electrical System" }, 
-            { id: 6, name: "Frame and Body" }, 
-            { id: 7, name: "Wheels and Tires" }, 
-            { id: 8, name: "Exhaust System" }
-        ]
-    },
-    { 
-        id: 15, 
-        companyId: 1, 
-        name: "Super Meteor 650", 
-        year: "2023–Present", 
-        image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/super_meteor_650_placeholder.jpg", 
-        components: [
-            { id: 1, name: "Engine" }, 
-            { id: 2, name: "Transmission" }, 
-            { id: 3, name: "Suspension" }, 
-            { id: 4, name: "Brakes" }, 
-            { id: 5, name: "Electrical System" }, 
-            { id: 6, name: "Frame and Body" }, 
-            { id: 7, name: "Wheels and Tires" }, 
-            { id: 8, name: "Exhaust System" }
-        ]
-    },
-    { 
-        id: 16, 
-        companyId: 1, 
-        name: "Shotgun 650", 
-        year: "2023–Present", 
-        image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/shotgun_650_placeholder.jpg", 
-        components: [
-            { id: 1, name: "Engine" }, 
-            { id: 2, name: "Transmission" }, 
-            { id: 3, name: "Suspension" }, 
-            { id: 4, name: "Brakes" }, 
-            { id: 5, name: "Electrical System" }, 
-            { id: 6, name: "Frame and Body" }, 
-            { id: 7, name: "Wheels and Tires" }, 
-            { id: 8, name: "Exhaust System" }
-        ]
-    },
-    { 
-        id: 17, 
-        companyId: 1, 
-        name: "Himalayan 450", 
-        year: "2023–Present", 
-        image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/himalayan_450_placeholder.jpg", 
-        components: [
-            { id: 1, name: "Engine" }, 
-            { id: 2, name: "Transmission" }, 
-            { id: 3, name: "Suspension" }, 
-            { id: 4, name: "Brakes" }, 
-            { id: 5, name: "Electrical System" }, 
-            { id: 6, name: "Frame and Body" }, 
-            { id: 7, name: "Wheels and Tires" }, 
-            { id: 8, name: "Exhaust System" }
-        ]
-    },
-    { 
-        id: 18, 
-        companyId: 1, 
-        name: "Guerrilla 450", 
-        year: "2024–Present", 
-        image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/guerrilla_450_placeholder.jpg", 
-        components: [
-            { id: 1, name: "Engine" }, 
-            { id: 2, name: "Transmission" }, 
-            { id: 3, name: "Suspension" }, 
-            { id: 4, name: "Brakes" }, 
-            { id: 5, name: "Electrical System" }, 
-            { id: 6, name: "Frame and Body" }, 
-            { id: 7, name: "Wheels and Tires" }, 
-            { id: 8, name: "Exhaust System" }
-        ]
-    },
-    { 
-        id: 19, 
-        companyId: 1, 
-        name: "Bear 650", 
-        year: "2024–Present", 
-        image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/bear_650_placeholder.jpg", 
-        components: [
-            { id: 1, name: "Engine" }, 
-            { id: 2, name: "Transmission" }, 
-            { id: 3, name: "Suspension" }, 
-            { id: 4, name: "Brakes" }, 
-            { id: 5, name: "Electrical System" }, 
-            { id: 6, name: "Frame and Body" }, 
-            { id: 7, name: "Wheels and Tires" }, 
-            { id: 8, name: "Exhaust System" }
-        ]
-    },
-    { 
-        id: 20, 
-        companyId: 1, 
-        name: "Goan Classic 350", 
-        year: "2024–Present", 
-        image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/goan_classic_350_placeholder.jpg", 
-        components: [
-            { id: 1, name: "Engine" }, 
-            { id: 2, name: "Transmission" }, 
-            { id: 3, name: "Suspension" }, 
-            { id: 4, name: "Brakes" }, 
-            { id: 5, name: "Electrical System" }, 
-            { id: 6, name: "Frame and Body" }, 
-            { id: 7, name: "Wheels and Tires" }, 
-            { id: 8, name: "Exhaust System" }
-        ]
-    },
-    { 
-        id: 21, 
-        companyId: 1, 
-        name: "Scram 440", 
-        year: "2024–Present", 
-        image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/scram_440_placeholder.jpg", 
-        components: [
-            { id: 1, name: "Engine" }, 
-            { id: 2, name: "Transmission" }, 
-            { id: 3, name: "Suspension" }, 
-            { id: 4, name: "Brakes" }, 
-            { id: 5, name: "Electrical System" }, 
-            { id: 6, name: "Frame and Body" }, 
-            { id: 7, name: "Wheels and Tires" }, 
-            { id: 8, name: "Exhaust System" }
-        ]
-    },
-
+    { id: 12, companyId: 1, name: "Meteor 350", year: "2020–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/meteor_350_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 13, companyId: 1, name: "Scram 411", year: "2022–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/scram_411_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 14, companyId: 1, name: "Hunter 350", year: "2022–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739858431/Hunter_350_d1m07u.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 15, companyId: 1, name: "Super Meteor 650", year: "2023–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/super_meteor_650_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 16, companyId: 1, name: "Shotgun 650", year: "2023–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/shotgun_650_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 17, companyId: 1, name: "Himalayan 450", year: "2023–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/himalayan_450_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 18, companyId: 1, name: "Guerrilla 450", year: "2024–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/guerrilla_450_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 19, companyId: 1, name: "Bear 650", year: "2024–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/bear_650_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 20, companyId: 1, name: "Goan Classic 350", year: "2024–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/goan_classic_350_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 21, companyId: 1, name: "Scram 440", year: "2024–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/scram_440_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
     // Upcoming Models by 2025
-    { 
-        id: 22, 
-        companyId: 1, 
-        name: "Classic 650", 
-        year: "2025", 
-        image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/classic_650_placeholder.jpg", 
-        components: [
-            { id: 1, name: "Engine" }, 
-            { id: 2, name: "Transmission" }, 
-            { id: 3, name: "Suspension" }, 
-            { id: 4, name: "Brakes" }, 
-            { id: 5, name: "Electrical System" }, 
-            { id: 6, name: "Frame and Body" }, 
-            { id: 7, name: "Wheels and Tires" }, 
-            { id: 8, name: "Exhaust System" }
-        ]
-    },
-    { 
-        id: 23, 
-        companyId: 1, 
-        name: "Bullet 650", 
-        year: "2025", 
-        image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/bullet_650_placeholder.jpg", 
-        components: [
-            { id: 1, name: "Engine" }, 
-            { id: 2, name: "Transmission" }, 
-            { id: 3, name: "Suspension" }, 
-            { id: 4, name: "Brakes" }, 
-            { id: 5, name: "Electrical System" }, 
-            { id: 6, name: "Frame and Body" }, 
-            { id: 7, name: "Wheels and Tires" }, 
-            { id: 8, name: "Exhaust System" }
-        ]
-    },
-    { 
-        id: 24, 
-        companyId: 1, 
-        name: "Continental GT 450", 
-        year: "2025", 
-        image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/continental_gt_450_placeholder.jpg", 
-        components: [
-            { id: 1, name: "Engine" }, 
-            { id: 2, name: "Transmission" }, 
-            { id: 3, name: "Suspension" }, 
-            { id: 4, name: "Brakes" }, 
-            { id: 5, name: "Electrical System" }, 
-            { id: 6, name: "Frame and Body" }, 
-            { id: 7, name: "Wheels and Tires" }, 
-            { id: 8, name: "Exhaust System" }
-        ]
-    },
-    { 
-        id: 25, 
-        companyId: 1, 
-        name: "Scrambler 450", 
-        year: "2025", 
-        image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/scrambler_450_placeholder.jpg", 
-        components: [
-            { id: 1, name: "Engine" }, 
-            { id: 2, name: "Transmission" }, 
-            { id: 3, name: "Suspension" }, 
-            { id: 4, name: "Brakes" }, 
-            { id: 5, name: "Electrical System" }, 
-            { id: 6, name: "Frame and Body" }, 
-            { id: 7, name: "Wheels and Tires" }, 
-            { id: 8, name: "Exhaust System" }
-        ]
-    },
-    { 
-        id: 26, 
-        companyId: 1, 
-        name: "Classic 350 Bobber", 
-        year: "2025", 
-        image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/classic_350_bobber_placeholder.jpg", 
-        components: [
-            { id: 1, name: "Engine" }, 
-            { id: 2, name: "Transmission" }, 
-            { id: 3, name: "Suspension" }, 
-            { id: 4, name: "Brakes" }, 
-            { id: 5, name: "Electrical System" }, 
-            { id: 6, name: "Frame and Body" }, 
-            { id: 7, name: "Wheels and Tires" }, 
-            { id: 8, name: "Exhaust System" }
-        ]
-    },
+    { id: 22, companyId: 1, name: "Classic 650", year: "2025", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/classic_650_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 23, companyId: 1, name: "Bullet 650", year: "2025", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/bullet_650_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 24, companyId: 1, name: "Continental GT 450", year: "2025", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/continental_gt_450_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 25, companyId: 1, name: "Scrambler 450", year: "2025", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/scrambler_450_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 26, companyId: 1, name: "Classic 350 Bobber", year: "2025", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/classic_350_bobber_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+
     // Hero
-    
     // 1990s Models
-    { id: 1, companyId: 2, name: "CD 100", year: "1984–2004", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/hero_cd100_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-    { id: 2, companyId: 2, name: "Splendor", year: "1994–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/hero_splendor_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-    { id: 3, companyId: 2, name: "CBZ", year: "1999–2005", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/hero_cbz_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-
+    { id: 27, companyId: 2, name: "CD 100", year: "1984–2004", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1742105820/CD_100_cq7aab.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 28, companyId: 2, name: "Splendor", year: "1994–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1742105821/Old_splendor_p3mqj3.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 29, companyId: 2, name: "CBZ", year: "1999–2005", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1742105820/CBZ_hrlqni.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
     // 2000s Models
-    { id: 4, companyId: 2, name: "Passion", year: "2001–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/hero_passion_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-    { id: 5, companyId: 2, name: "Karizma", year: "2003–2014", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/hero_karizma_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-    { id: 6, companyId: 2, name: "Glamour", year: "2005–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/hero_glamour_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-
+    { id: 30, companyId: 2, name: "Passion", year: "2001–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1742105821/Passion_tllplt.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 31, companyId: 2, name: "Karizma", year: "2003–2014", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1742105821/karizma_tyxxnc.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 32, companyId: 2, name: "Glamour", year: "2005–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1742105820/Glomur_mhrqtt.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
     // 2010s Models
-    { id: 7, companyId: 2, name: "HF Deluxe", year: "2007–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/hero_hf_deluxe_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-    { id: 8, companyId: 2, name: "Xpulse 200", year: "2019–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/hero_xpulse200_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-    { id: 9, companyId: 2, name: "Xtreme 160R", year: "2020–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/hero_xtreme160r_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-
+    { id: 33, companyId: 2, name: "HF Deluxe", year: "2007–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1742105821/HF_Deluxe_cjhq3g.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 34, companyId: 2, name: "Xpulse 200", year: "2019–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/hero_xpulse200_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 35, companyId: 2, name: "Xtreme 160R", year: "2020–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/hero_xtreme160r_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
     // 2020s Models
-    { id: 10, companyId: 2, name: "Karizma XMR", year: "2023–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/hero_karizma_xmr_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-    { id: 11, companyId: 2, name: "Xtreme 125R", year: "2024–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/hero_xtreme125r_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-    { id: 12, companyId: 2, name: "Mavrick 440", year: "2024–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/hero_mavrick440_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-    { id: 13, companyId: 2, name: "Xpulse 210", year: "2025", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/hero_xpulse210_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-    { id: 14, companyId: 2, name: "Xtreme 250R", year: "2025", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/hero_xtreme250r_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-
+    { id: 36, companyId: 2, name: "Karizma XMR", year: "2023–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/hero_karizma_xmr_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 37, companyId: 2, name: "Xtreme 125R", year: "2024–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/hero_xtreme125r_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 38, companyId: 2, name: "Mavrick 440", year: "2024–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/hero_mavrick440_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 39, companyId: 2, name: "Xpulse 210", year: "2025", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/hero_xpulse210_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 40, companyId: 2, name: "Xtreme 250R", year: "2025", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/hero_xtreme250r_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
 
     // Honda
-   
     // 1990s Models
-    { id: 15, companyId: 3, name: "Shine", year: "2006–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/honda_shine_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-    { id: 16, companyId: 3, name: "Unicorn", year: "2004–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/honda_unicorn_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-
+    { id: 41, companyId: 3, name: "Shine", year: "2006–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1742106254/Shine_zn8y4p.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 42, companyId: 3, name: "Unicorn", year: "2004–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1742106258/Unicorn_iunfkd.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
     // 2000s Models
-    { id: 17, companyId: 3, name: "CBR150R", year: "2002–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/honda_cbr150r_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-    { id: 18, companyId: 3, name: "CB Twister", year: "2010–2016", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/honda_cb_twister_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-
+    { id: 43, companyId: 3, name: "CBR150R", year: "2002–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1742106254/CBR_150_jc5nea.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 44, companyId: 3, name: "CB Twister", year: "2010–2016", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1742106254/CB_Twister_l9zvpu.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
     // 2010s Models
-    { id: 19, companyId: 3, name: "CBR250R", year: "2011–2018", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/honda_cbr250r_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-    { id: 20, companyId: 3, name: "Hornet 160R", year: "2015–2020", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/honda_hornet160r_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-    { id: 21, companyId: 3, name: "H’ness CB350", year: "2020–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/honda_hness_cb350_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-
+    { id: 45, companyId: 3, name: "CBR250R", year: "2011–2018", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1742106254/CBR_250_n52vkr.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 46, companyId: 3, name: "Hornet 160R", year: "2015–2020", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1742106254/Hornet_nov2kd.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 47, companyId: 3, name: "H’ness CB350", year: "2020–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/honda_hness_cb350_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
     // 2020s Models
-    { id: 22, companyId: 3, name: "CB200X", year: "2021–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/honda_cb200x_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-    { id: 23, companyId: 3, name: "CB350 RS", year: "2021–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/honda_cb350rs_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-    { id: 24, companyId: 3, name: "Hornet 2.0", year: "2020–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/honda_hornet2_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-    { id: 25, companyId: 3, name: "CB500X", year: "2025", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/honda_cb500x_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-
+    { id: 48, companyId: 3, name: "CB200X", year: "2021–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/honda_cb200x_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 49, companyId: 3, name: "CB350 RS", year: "2021–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/honda_cb350rs_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 50, companyId: 3, name: "Hornet 2.0", year: "2020–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/honda_hornet2_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 51, companyId: 3, name: "CB500X", year: "2025", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/honda_cb500x_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
 
     // TVS
-   
     // 1990s Models
-    { id: 26, companyId: 4, name: "Victor", year: "2001–2018", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/tvs_victor_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-
+    { id: 52, companyId: 4, name: "Victor", year: "2001–2018", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1742106442/TVS_Victor_z58m6b.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
     // 2000s Models
-    { id: 27, companyId: 4, name: "Apache RTR 160", year: "2007–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/tvs_apache_rtr160_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-    { id: 28, companyId: 4, name: "Apache RTR 180", year: "2009–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/tvs_apache_rtr180_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-
+    { id: 53, companyId: 4, name: "Apache RTR 160", year: "2007–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1742106438/Apache_160_uzcsri.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 54, companyId: 4, name: "Apache RTR 180", year: "2009–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1742106438/Apache_180_tjwwbc.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
     // 2010s Models
-    { id: 29, companyId: 4, name: "Apache RTR 200", year: "2016–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/tvs_apache_rtr200_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-    { id: 30, companyId: 4, name: "Radeon", year: "2018–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/tvs_radeon_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-    { id: 31, companyId: 4, name: "Apache RR 310", year: "2017–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/tvs_apache_rr310_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-
+    { id: 55, companyId: 4, name: "Apache RTR 200", year: "2016–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1742106438/Apache_200_u8nzu2.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 56, companyId: 4, name: "Radeon", year: "2018–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1742106439/Radeon_pz139k.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 57, companyId: 4, name: "Apache RR 310", year: "2017–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/tvs_apache_rr310_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
     // 2020s Models
-    { id: 32, companyId: 4, name: "Raider 125", year: "2021–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/tvs_raider125_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-    { id: 33, companyId: 4, name: "Ronin", year: "2022–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/tvs_ronin_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-    { id: 34, companyId: 4, name: "Apache RTR 165 RP", year: "2025", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/tvs_apache_rtr165rp_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-
+    { id: 58, companyId: 4, name: "Raider 125", year: "2021–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1742106439/Raider_l3ghc8.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 59, companyId: 4, name: "Ronin", year: "2022–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/tvs_ronin_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 60, companyId: 4, name: "Apache RTR 165 RP", year: "2025", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/tvs_apache_rtr165rp_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
 
     // Bajaj
-    
     // 1990s Models
-    { id: 44, companyId: 5, name: "Pulsar 150", year: "2001–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/bajaj_pulsar150_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-    { id: 45, companyId: 5, name: "Pulsar 180", year: "2001–2019", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/bajaj_pulsar180_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-
+    { id: 61, companyId: 5, name: "Pulsar 150", year: "2001–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1742103091/pulsar_150_bywhbq.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 62, companyId: 5, name: "Pulsar 180", year: "2001–2019", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1742103091/pulsar_180_jmdxgn.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
     // 2000s Models
-    { id: 46, companyId: 5, name: "Discover 125", year: "2004–2020", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/bajaj_discover125_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-    { id: 47, companyId: 5, name: "Avenger 220", year: "2005–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/bajaj_avenger220_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-    { id: 48, companyId: 5, name: "Pulsar NS200", year: "2012–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/bajaj_pulsar_ns200_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-
+    { id: 63, companyId: 5, name: "Discover 125", year: "2004–2020", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1742103091/Discover_125_qeffbw.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 64, companyId: 5, name: "Avenger 220", year: "2005–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1742103091/Avenger_220_qtzzw5.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 65, companyId: 5, name: "Pulsar NS200", year: "2012–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/bajaj_pulsar_ns200_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
     // 2010s Models
-    { id: 49, companyId: 5, name: "Platina 100", year: "2006–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/bajaj_platina100_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-    { id: 50, companyId: 5, name: "Dominar 400", year: "2016–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/bajaj_dominar400_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-    { id: 51, companyId: 5, name: "Pulsar RS200", year: "2015–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/bajaj_pulsar_rs200_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-
+    { id: 66, companyId: 5, name: "Platina 100", year: "2006–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1742103091/Platina_100_t2smq7.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 67, companyId: 5, name: "Dominar 400", year: "2016–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1742103091/Dominar_400_jgpdq7.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 68, companyId: 5, name: "Pulsar RS200", year: "2015–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/bajaj_pulsar_rs200_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
     // 2020s Models
-    { id: 52, companyId: 5, name: "Pulsar N160", year: "2022–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/bajaj_pulsar_n160_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-    { id: 53, companyId: 5, name: "Pulsar N250", year: "2021–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/bajaj_pulsar_n250_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-    { id: 54, companyId: 5, name: "Dominar 250", year: "2020–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/bajaj_dominar250_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-    { id: 55, companyId: 5, name: "Pulsar F250", year: "2025", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/bajaj_pulsar_f250_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-
+    { id: 69, companyId: 5, name: "Pulsar N160", year: "2022–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1742103091/Pulsar_160_ns_vn8eiw.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 70, companyId: 5, name: "Pulsar N220", year: "2021–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1742103091/Pulsar_220_niibfj.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 71, companyId: 5, name: "Dominar 250", year: "2020–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1742103091/dominar_250_exclwy.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 72, companyId: 5, name: "Pulsar F250", year: "2025", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1742103091/Pulsar_N_250_sto2f3.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
 
     // Suzuki
-    
     // 2000s Models
-    { id: 35, companyId: 6, name: "Heat", year: "2005–2010", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/suzuki_heat_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-    { id: 36, companyId: 6, name: "Zeus", year: "2005–2010", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/suzuki_zeus_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-
+    { id: 73, companyId: 6, name: "Heat", year: "2005–2010", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1742102879/Suzuki_Heat_s0i7oh.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 74, companyId: 6, name: "Zeus", year: "2005–2010", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1742102879/Zeues_lzh17v.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
     // 2010s Models
-    { id: 37, companyId: 6, name: "Gixxer 150", year: "2014–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/suzuki_gixxer150_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-    { id: 38, companyId: 6, name: "Gixxer SF", year: "2015–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/suzuki_gixxer_sf_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-    { id: 39, companyId: 6, name: "Intruder 150", year: "2017–2020", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/suzuki_intruder150_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-
+    { id: 75, companyId: 6, name: "Gixxer 150", year: "2014–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/suzuki_gixxer150_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 76, companyId: 6, name: "Gixxer SF", year: "2015–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1742102879/gixxer_ygzxig.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 77, companyId: 6, name: "Intruder 150", year: "2017–2020", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1742102879/intruder_pppnoq.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
     // 2020s Models
-    { id: 40, companyId: 6, name: "V-Strom 250", year: "2021–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/suzuki_vstrom250_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-    { id: 41, companyId: 6, name: "Gixxer 250", year: "2019–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/suzuki_gixxer250_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-    { id: 42, companyId: 6, name: "Hayabusa", year: "2021–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/suzuki_hayabusa_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-    { id: 43, companyId: 6, name: "Gixxer SF 250", year: "2025", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/suzuki_gixxer_sf250_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
-
+    { id: 78, companyId: 6, name: "V-Strom 250", year: "2021–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1742102880/Vstrom_ecvej6.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 79, companyId: 6, name: "Gixxer 250", year: "2019–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739878431/suzuki_gixxer250_placeholder.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 80, companyId: 6, name: "Hayabusa", year: "2021–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1742102879/hayabusa_f7ut3l.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
+    { id: 81, companyId: 6, name: "Gixxer SF 250", year: "2025", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1742102879/gixxer_sf_250_fxgtwx.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
 ];
 
-// Spare Parts Data (Generic, compatible across brands)
+
+// Spare Parts Data (unchanged, full list from your input)
 const sparePartsData = [
     { id: 1, componentId: 1, name: "Piston", price: 50, image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739870891/Piston_ks34ug.jpg" },
     { id: 2, componentId: 1, name: "Crankshaft", price: 100, image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739870890/camshaft_wxbacw.jpg" },
@@ -634,6 +189,7 @@ const sparePartsData = [
 let cart = [];
 let currentComponentId = null;
 let currentCompanyId = null;
+let currentModelId = null;
 
 // Show Homepage (Companies)
 function showHome() {
@@ -647,17 +203,18 @@ function showHome() {
 
 // Show Models Page
 function showModels(companyId) {
-    currentCompanyId = companyId;
+    if (companyId) currentCompanyId = companyId;
     document.getElementById("home").classList.remove("active");
     document.getElementById("models").classList.add("active");
     document.getElementById("components").classList.remove("active");
     document.getElementById("spare-parts").classList.remove("active");
     document.getElementById("cart").classList.remove("active");
-    renderBikeModels(companyId);
+    renderBikeModels(currentCompanyId);
 }
 
 // Show Components Page
 function showComponents(modelId) {
+    currentModelId = modelId;
     document.getElementById("models").classList.remove("active");
     document.getElementById("components").classList.add("active");
     document.getElementById("spare-parts").classList.remove("active");
@@ -737,7 +294,7 @@ function renderSpareParts(componentId) {
     sparePartList.innerHTML = spareParts
         .map(
             (part) => {
-                const isInCart = cart.some(item => item.id === part.id);
+                const isInCart = cart.some((item) => item.id === part.id);
                 return `
                 <div class="card">
                     <img src="${part.image}" alt="${part.name}">
@@ -756,13 +313,18 @@ function renderSpareParts(componentId) {
 // Add to Cart
 function addToCart(partId) {
     const part = sparePartsData.find((p) => p.id === partId);
+    const model = bikeData.find((m) => m.id === currentModelId);
     const cartItem = cart.find((item) => item.id === partId);
 
     if (cartItem) {
         cartItem.quantity += 1;
     } else {
-        part.quantity = 1;
-        cart.push(part);
+        const enhancedPart = {
+            ...part,
+            quantity: 1,
+            bikeModel: model ? { name: model.name, year: model.year } : null,
+        };
+        cart.push(enhancedPart);
     }
 
     updateCartCount();
@@ -783,7 +345,8 @@ function renderCart() {
             <div class="cart-item">
                 <img src="${item.image}" alt="${item.name}">
                 <div>
-                    <h3>${item.companyName} ${item.modelName}{item.name}</h3>
+                    <h3>${item.name}</h3>
+                    <p>Bike Model: ${item.bikeModel ? `${item.bikeModel.name} (${item.bikeModel.year})` : 'N/A'}</p>
                     <p>$${item.price} x ${item.quantity} = $${item.price * item.quantity}</p>
                 </div>
                 <div class="quantity-controls">
@@ -806,7 +369,9 @@ function increaseQuantity(partId) {
         cartItem.quantity += 1;
         updateCartCount();
         renderCart();
-        renderSpareParts(currentComponentId);
+        if (document.getElementById("spare-parts").classList.contains("active")) {
+            renderSpareParts(currentComponentId);
+        }
     }
 }
 
@@ -820,7 +385,9 @@ function decreaseQuantity(partId) {
         }
         updateCartCount();
         renderCart();
-        renderSpareParts(currentComponentId);
+        if (document.getElementById("spare-parts").classList.contains("active")) {
+            renderSpareParts(currentComponentId);
+        }
     }
 }
 
@@ -831,17 +398,21 @@ function placeOrder() {
         return;
     }
     document.getElementById("user-verification").style.display = "block";
+    document.getElementById("order-confirmation").style.display = "none"; // Reset confirmation
 }
 
-// Submit Order with Firebase
+// Submit Order with Firebase (Updated to show green success message)
 function submitOrder(event) {
     event.preventDefault();
 
     const username = document.getElementById("username").value.trim();
     const phone = document.getElementById("phone").value.trim();
+    const address = document.getElementById("address").value.trim();
+    const mechanicShop = document.getElementById("mechanic-shop").value.trim();
     const spinner = document.getElementById("loading-spinner");
 
-    if (!username || !phone) {
+    // Validation
+    if (!username || !phone || !address || !mechanicShop) {
         showError("Please fill in all fields.");
         return;
     }
@@ -853,49 +424,54 @@ function submitOrder(event) {
 
     spinner.style.display = "block";
 
-    firebase.firestore().collection("orders").add({
-        username: username,
-        phone: phone,
-        items: cart.map(item => ({
-            companyName: item.companyName,
-            modelName: item.modelName,
+    const orderData = {
+        username,
+        phone,
+        address,
+        mechanicShop,
+        items: cart.map((item) => ({
             name: item.name,
             price: item.price,
             quantity: item.quantity,
-            total: item.price * item.quantity
+            bikeModel: item.bikeModel ? `${item.bikeModel.name} (${item.bikeModel.year})` : "N/A",
         })),
-        totalAmount: cart.reduce((sum, item) => sum + item.price * item.quantity, 0),
-        timestamp: firebase.firestore.FieldValue.serverTimestamp()
-    })
-    .then(() => {
-        spinner.style.display = "none";
-        document.getElementById("user-verification").style.display = "none";
-        document.getElementById("order-confirmation").style.display = "block";
-        cart = [];
-        updateCartCount();
-        renderCart();
-        renderSpareParts(currentComponentId);
-        setTimeout(() => {
-            document.getElementById("order-confirmation").style.display = "none";
-            showHome();
-        }, 3000);
-    })
-    .catch(error => {
-        spinner.style.display = "none";
-        showError("Failed to place order: " + error.message);
-        console.error("Firebase error:", error);
-    });
+        total: cart.reduce((sum, item) => sum + item.price * item.quantity, 0),
+        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+    };
+
+    firebase
+        .firestore()
+        .collection("orders")
+        .add(orderData)
+        .then(() => {
+            spinner.style.display = "none";
+            document.getElementById("user-verification").style.display = "none";
+            cart = []; // Clear the cart
+            updateCartCount(); // Reset cart count
+            document.getElementById("user-verification").querySelector("form").reset(); // Reset form
+
+            // Show green success message
+            const confirmation = document.getElementById("order-confirmation");
+            confirmation.innerHTML = `<p style="color: green; font-weight: bold;">Order placed successfully!</p>`;
+            confirmation.style.display = "block";
+
+            // Refresh page after 2 seconds
+            setTimeout(() => {
+                location.reload();
+            }, 2000);
+        })
+        .catch((error) => {
+            spinner.style.display = "none";
+            showError("Error placing order: " + error.message);
+        });
 }
 
 // Show Error Message
 function showError(message) {
-    const errorDiv = document.createElement("div");
-    errorDiv.style.cssText = "color: red; text-align: center; margin-top: 1rem;";
-    errorDiv.textContent = message;
-    const form = document.getElementById("order-form");
-    form.appendChild(errorDiv);
-    setTimeout(() => errorDiv.remove(), 3000);
+    alert(message);
 }
 
 // Initialize
-showHome();
+document.addEventListener("DOMContentLoaded", () => {
+    showHome();
+});
