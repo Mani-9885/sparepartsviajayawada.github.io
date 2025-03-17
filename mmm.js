@@ -1,4 +1,4 @@
-// Company Data (unchanged)
+// Company Data
 const companyData = [
     { id: 1, name: "Royal Enfield", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1741345079/download_kwl7xm.jpg" },
     { id: 2, name: "Hero", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1741345079/download_3_lruu8z.png" },
@@ -8,7 +8,7 @@ const companyData = [
     { id: 6, name: "Suzuki", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1741345079/download_1_xzkboi.png" },
 ];
 
-// Bike Models Data (unchanged, full list from your input)
+// Bike Models by Company
 const bikeData = [
    { id: 1, companyId: 1, name: "Bullet 350", year: "1990–Present", image: "https://res.cloudinary.com/df4awljmy/image/upload/c_thumb,w_200,g_face/v1739858431/Classic_350_noif3c.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
     { id: 2, companyId: 1, name: "Bullet 500", year: "1990–2020", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739688733/royal-enfield-select-model-airborne-blue-1579618691640_qejfy2.webp", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
@@ -126,8 +126,7 @@ const bikeData = [
     { id: 81, companyId: 6, name: "Gixxer SF 250", year: "2025", image: "https://res.cloudinary.com/df4awljmy/image/upload/v1742102879/gixxer_sf_250_fxgtwx.jpg", components: [{ id: 1, name: "Engine" }, { id: 2, name: "Transmission" }, { id: 3, name: "Suspension" }, { id: 4, name: "Brakes" }, { id: 5, name: "Electrical System" }, { id: 6, name: "Frame and Body" }, { id: 7, name: "Wheels and Tires" }, { id: 8, name: "Exhaust System" }] },
 ];
 
-
-// Spare Parts Data (unchanged, full list from your input)
+// Spare Parts Data
 const sparePartsData = [
     { id: 1, componentId: 1, name: "Piston", price: 50, image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739870891/Piston_ks34ug.jpg" },
     { id: 2, componentId: 1, name: "Crankshaft", price: 100, image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739870890/camshaft_wxbacw.jpg" },
@@ -190,6 +189,8 @@ let cart = [];
 let currentComponentId = null;
 let currentCompanyId = null;
 let currentModelId = null;
+let currentUser = localStorage.getItem('currentUser') || null;
+let unsubscribeOrders = null;
 
 // Show Homepage (Companies)
 function showHome() {
@@ -198,18 +199,22 @@ function showHome() {
     document.getElementById("components").classList.remove("active");
     document.getElementById("spare-parts").classList.remove("active");
     document.getElementById("cart").classList.remove("active");
+    document.getElementById("orders").classList.remove("active");
+    if (unsubscribeOrders) unsubscribeOrders();
     renderCompanies();
 }
 
 // Show Models Page
 function showModels(companyId) {
-    if (companyId) currentCompanyId = companyId;
+    currentCompanyId = companyId;
     document.getElementById("home").classList.remove("active");
     document.getElementById("models").classList.add("active");
     document.getElementById("components").classList.remove("active");
     document.getElementById("spare-parts").classList.remove("active");
     document.getElementById("cart").classList.remove("active");
-    renderBikeModels(currentCompanyId);
+    document.getElementById("orders").classList.remove("active");
+    if (unsubscribeOrders) unsubscribeOrders();
+    renderBikeModels(companyId);
 }
 
 // Show Components Page
@@ -219,6 +224,8 @@ function showComponents(modelId) {
     document.getElementById("components").classList.add("active");
     document.getElementById("spare-parts").classList.remove("active");
     document.getElementById("cart").classList.remove("active");
+    document.getElementById("orders").classList.remove("active");
+    if (unsubscribeOrders) unsubscribeOrders();
     renderComponents(modelId);
 }
 
@@ -228,6 +235,8 @@ function showSpareParts(componentId) {
     document.getElementById("components").classList.remove("active");
     document.getElementById("spare-parts").classList.add("active");
     document.getElementById("cart").classList.remove("active");
+    document.getElementById("orders").classList.remove("active");
+    if (unsubscribeOrders) unsubscribeOrders();
     renderSpareParts(componentId);
 }
 
@@ -238,10 +247,23 @@ function showCart() {
     document.getElementById("components").classList.remove("active");
     document.getElementById("spare-parts").classList.remove("active");
     document.getElementById("cart").classList.add("active");
+    document.getElementById("orders").classList.remove("active");
+    if (unsubscribeOrders) unsubscribeOrders();
     renderCart();
 }
 
-// Render Companies
+// Show Orders
+function showOrders() {
+    document.getElementById("home").classList.remove("active");
+    document.getElementById("models").classList.remove("active");
+    document.getElementById("components").classList.remove("active");
+    document.getElementById("spare-parts").classList.remove("active");
+    document.getElementById("cart").classList.remove("active");
+    document.getElementById("orders").classList.add("active");
+    renderOrders();
+}
+
+// Render Functions
 function renderCompanies() {
     const companyList = document.getElementById("company-list");
     companyList.innerHTML = companyData
@@ -256,7 +278,6 @@ function renderCompanies() {
         .join("");
 }
 
-// Render Bike Models
 function renderBikeModels(companyId) {
     const models = bikeData.filter((model) => model.companyId === companyId);
     const modelList = document.getElementById("model-list");
@@ -272,7 +293,6 @@ function renderBikeModels(companyId) {
         .join("");
 }
 
-// Render Components
 function renderComponents(modelId) {
     const model = bikeData.find((m) => m.id === modelId);
     const componentList = document.getElementById("component-list");
@@ -287,14 +307,13 @@ function renderComponents(modelId) {
         .join("");
 }
 
-// Render Spare Parts
 function renderSpareParts(componentId) {
     const spareParts = sparePartsData.filter((part) => part.componentId === componentId);
     const sparePartList = document.getElementById("spare-part-list");
     sparePartList.innerHTML = spareParts
         .map(
             (part) => {
-                const isInCart = cart.some((item) => item.id === part.id);
+                const isInCart = cart.some(item => item.id === part.id);
                 return `
                 <div class="card">
                     <img src="${part.image}" alt="${part.name}">
@@ -310,33 +329,6 @@ function renderSpareParts(componentId) {
         .join("");
 }
 
-// Add to Cart
-function addToCart(partId) {
-    const part = sparePartsData.find((p) => p.id === partId);
-    const model = bikeData.find((m) => m.id === currentModelId);
-    const cartItem = cart.find((item) => item.id === partId);
-
-    if (cartItem) {
-        cartItem.quantity += 1;
-    } else {
-        const enhancedPart = {
-            ...part,
-            quantity: 1,
-            bikeModel: model ? { name: model.name, year: model.year } : null,
-        };
-        cart.push(enhancedPart);
-    }
-
-    updateCartCount();
-    renderSpareParts(currentComponentId);
-}
-
-// Update Cart Count
-function updateCartCount() {
-    document.getElementById("cart-count").textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
-}
-
-// Render Cart
 function renderCart() {
     const cartItems = document.getElementById("cart-items");
     cartItems.innerHTML = cart
@@ -362,20 +354,88 @@ function renderCart() {
     document.getElementById("cart-total").textContent = `Total: $${total}`;
 }
 
-// Increase Quantity
+function renderOrders() {
+    console.log("Rendering orders for user:", currentUser);
+    const orderList = document.getElementById("order-list");
+
+    if (!currentUser) {
+        orderList.innerHTML = "<p>Please place an order first to view your history.</p>";
+        return;
+    }
+
+    if (unsubscribeOrders) unsubscribeOrders();
+
+    unsubscribeOrders = firebase.firestore().collection("orders")
+        .where("username", "==", currentUser)
+        .orderBy("timestamp", "desc")
+        .limit(3) // Limit to the last 3 orders
+        .onSnapshot((querySnapshot) => {
+            console.log("Query snapshot received. Size:", querySnapshot.size);
+            if (querySnapshot.empty) {
+                orderList.innerHTML = "<p>No orders found for this user.</p>";
+                return;
+            }
+
+            orderList.innerHTML = querySnapshot.docs.map(doc => {
+                const order = doc.data();
+                console.log("Order data:", order);
+                const itemsList = order.items.map(item => 
+                    `<li>${item.name} - $${item.price} x ${item.quantity} = $${item.total} (Model: ${item.bikeModel ? item.bikeModel.name : 'N/A'})</li>`
+                ).join("");
+
+                const orderDate = order.timestamp ? new Date(order.timestamp.toDate()).toLocaleString() : "Pending";
+                return `
+                    <div class="order-item">
+                        <h3>Order on ${orderDate}</h3>
+                        <p><strong>Delivered to:</strong> ${order.address}</p>
+                        <p><strong>Mechanic Shop:</strong> ${order.mechanicShop}</p>
+                        <p><strong>Phone:</strong> ${order.phone}</p>
+                        <ul>${itemsList}</ul>
+                        <p><strong>Total:</strong> $${order.totalAmount}</p>
+                    </div>
+                `;
+            }).join("");
+        }, (error) => {
+            console.error("Error in real-time listener:", error);
+            showError("Failed to fetch orders: " + error.message);
+        });
+}
+
+// Cart Functions
+function addToCart(partId) {
+    const part = sparePartsData.find((p) => p.id === partId);
+    const model = bikeData.find((m) => m.id === currentModelId);
+    const cartItem = cart.find((item) => item.id === partId);
+
+    if (cartItem) {
+        cartItem.quantity += 1;
+    } else {
+        const enhancedPart = {
+            ...part,
+            quantity: 1,
+            bikeModel: model ? { name: model.name, year: model.year } : null
+        };
+        cart.push(enhancedPart);
+    }
+
+    updateCartCount();
+    renderSpareParts(currentComponentId);
+}
+
+function updateCartCount() {
+    document.getElementById("cart-count").textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
+}
+
 function increaseQuantity(partId) {
     const cartItem = cart.find((item) => item.id === partId);
     if (cartItem) {
         cartItem.quantity += 1;
         updateCartCount();
         renderCart();
-        if (document.getElementById("spare-parts").classList.contains("active")) {
-            renderSpareParts(currentComponentId);
-        }
+        renderSpareParts(currentComponentId);
     }
 }
 
-// Decrease Quantity
 function decreaseQuantity(partId) {
     const cartItem = cart.find((item) => item.id === partId);
     if (cartItem) {
@@ -385,23 +445,19 @@ function decreaseQuantity(partId) {
         }
         updateCartCount();
         renderCart();
-        if (document.getElementById("spare-parts").classList.contains("active")) {
-            renderSpareParts(currentComponentId);
-        }
+        renderSpareParts(currentComponentId);
     }
 }
 
-// Place Order
+// Order Functions
 function placeOrder() {
     if (cart.length === 0) {
         showError("Your cart is empty. Add some items first!");
         return;
     }
     document.getElementById("user-verification").style.display = "block";
-    document.getElementById("order-confirmation").style.display = "none"; // Reset confirmation
 }
 
-// Submit Order with Firebase (Updated to show green success message)
 function submitOrder(event) {
     event.preventDefault();
 
@@ -411,7 +467,6 @@ function submitOrder(event) {
     const mechanicShop = document.getElementById("mechanic-shop").value.trim();
     const spinner = document.getElementById("loading-spinner");
 
-    // Validation
     if (!username || !phone || !address || !mechanicShop) {
         showError("Please fill in all fields.");
         return;
@@ -423,55 +478,80 @@ function submitOrder(event) {
     }
 
     spinner.style.display = "block";
+    currentUser = username;
+    localStorage.setItem('currentUser', currentUser);
+    console.log("Submitting order for user:", currentUser);
 
-    const orderData = {
-        username,
-        phone,
-        address,
-        mechanicShop,
-        items: cart.map((item) => ({
+    firebase.firestore().collection("orders").add({
+        username: username,
+        phone: phone,
+        address: address,
+        mechanicShop: mechanicShop,
+        items: cart.map(item => ({
             name: item.name,
             price: item.price,
             quantity: item.quantity,
-            bikeModel: item.bikeModel ? `${item.bikeModel.name} (${item.bikeModel.year})` : "N/A",
+            total: item.price * item.quantity,
+            bikeModel: item.bikeModel ? { name: item.bikeModel.name, year: item.bikeModel.year } : null
         })),
-        total: cart.reduce((sum, item) => sum + item.price * item.quantity, 0),
-        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-    };
+        totalAmount: cart.reduce((sum, item) => sum + item.price * item.quantity, 0),
+        timestamp: firebase.firestore.FieldValue.serverTimestamp()
+    })
+    .then((docRef) => {
+        console.log("Order submitted successfully with ID:", docRef.id);
+        spinner.style.display = "none";
+        document.getElementById("user-verification").style.display = "none";
+        document.getElementById("order-confirmation").style.display = "block";
 
-    firebase
-        .firestore()
-        .collection("orders")
-        .add(orderData)
-        .then(() => {
-            spinner.style.display = "none";
-            document.getElementById("user-verification").style.display = "none";
-            cart = []; // Clear the cart
-            updateCartCount(); // Reset cart count
-            document.getElementById("user-verification").querySelector("form").reset(); // Reset form
+        cart = [];
+        document.getElementById("username").value = "";
+        document.getElementById("phone").value = "";
+        document.getElementById("address").value = "";
+        document.getElementById("mechanic-shop").value = "";
+        updateCartCount();
+        renderCart();
 
-            // Show green success message
-            const confirmation = document.getElementById("order-confirmation");
-            confirmation.innerHTML = `<p style="color: green; font-weight: bold;">Order placed successfully!</p>`;
-            confirmation.style.display = "block";
+        setTimeout(() => {
+            document.getElementById("order-confirmation").style.display = "none";
+            showOrders();
+        }, 3000);
+    })
+    .catch(error => {
+        spinner.style.display = "none";
+        showError("Failed to place order: " + error.message);
+        console.error("Firebase error:", error);
+    });
+}
 
-            // Refresh page after 2 seconds
-            setTimeout(() => {
-                location.reload();
-            }, 2000);
-        })
-        .catch((error) => {
-            spinner.style.display = "none";
-            showError("Error placing order: " + error.message);
+// Admin Notification Listener
+function setupAdminNotification() {
+    firebase.firestore().collection("orders")
+        .onSnapshot((snapshot) => {
+            snapshot.docChanges().forEach((change) => {
+                if (change.type === "added") {
+                    console.log("New order received:", change.doc.data());
+                }
+            });
+        }, (error) => {
+            console.error("Error listening to orders:", error);
         });
 }
 
-// Show Error Message
+// Error Handling
 function showError(message) {
-    alert(message);
+    const errorDiv = document.createElement("div");
+    errorDiv.style.cssText = "color: red; text-align: center; margin-top: 1rem;";
+    errorDiv.textContent = message;
+    const form = document.getElementById("order-form");
+    form.appendChild(errorDiv);
+    setTimeout(() => errorDiv.remove(), 3000);
 }
 
 // Initialize
-document.addEventListener("DOMContentLoaded", () => {
+function initialize() {
+    console.log("Initializing with currentUser:", currentUser);
     showHome();
-});
+    setupAdminNotification();
+}
+
+initialize();
