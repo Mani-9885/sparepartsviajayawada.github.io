@@ -132,7 +132,7 @@ button.carted {
     gap: 0.5rem;
 }
 
-#user-verification input {
+#user-verification input, #user-verification textarea {
     padding: 0.5rem;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -163,4 +163,26 @@ button.carted {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+#order-list .order-item {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+#order-list .order-item h3 {
+    margin: 0;
+    color: #2c3e50;
+}
+
+#order-list .order-item p {
+    margin: 0.5rem 0;
+}
+
+#order-list .order-item ul {
+    list-style-type: none;
+    padding: 0;
 }
