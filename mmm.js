@@ -183,7 +183,7 @@ const sparePartsData = [
     { id: 36, componentId: 8, name: "Header Pipe", price: 120, image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739873862/header_pipe_bo0lid.jpg" },
     { id: 54, componentId: 8, name: "Exhaust Gasket", price: 15, image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739873862/exhaust_gasket_placeholder.jpg" },
     { id: 55, componentId: 8, name: "Silencer Clamp", price: 10, image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739873862/silencer_clamp_placeholder.jpg" },
-    { id: 55, componentId: 1, name: "Connecting Rod", price: 10, image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739873862/silencer_clamp_placeholder.jpg" },
+    { id: 56, componentId: 1, name: "Connecting Rod", price: 10, image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739873862/silencer_clamp_placeholder.jpg" },
 ];
 
 let cart = [];
