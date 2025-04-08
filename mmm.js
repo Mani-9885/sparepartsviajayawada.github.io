@@ -137,6 +137,7 @@ const sparePartsData = [
     { id: 37, componentId: 1, name: "Carburetor", price: 120, image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739871113/gear_box_zfmivw.jpg" },
     { id: 38, componentId: 1, name: "Oil Filter", price: 20, image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739870891/oil_filter_placeholder.jpg" },
     { id: 39, componentId: 1, name: "Gasket Set", price: 40, image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739870891/gasket_set_placeholder.jpg" },
+    { id: 56, componentId: 1, name: "Connecting Rod", price: 10, image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739873862/silencer_clamp_placeholder.jpg" },
     { id: 7, componentId: 2, name: "Clutch", price: 80, image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739871113/clutch_noq99f.jpg" },
     { id: 8, componentId: 2, name: "Gearbox", price: 300, image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739871113/gear_box_zfmivw.jpg" },
     { id: 9, componentId: 2, name: "Chain Drive", price: 120, image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739871113/chain_drive_l3ogl3.jpg" },
@@ -183,7 +184,7 @@ const sparePartsData = [
     { id: 36, componentId: 8, name: "Header Pipe", price: 120, image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739873862/header_pipe_bo0lid.jpg" },
     { id: 54, componentId: 8, name: "Exhaust Gasket", price: 15, image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739873862/exhaust_gasket_placeholder.jpg" },
     { id: 55, componentId: 8, name: "Silencer Clamp", price: 10, image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739873862/silencer_clamp_placeholder.jpg" },
-    { id: 56, componentId: 1, name: "Connecting Rod", price: 10, image: "https://res.cloudinary.com/df4awljmy/image/upload/v1739873862/silencer_clamp_placeholder.jpg" },
+    
 ];
 
 let cart = [];
